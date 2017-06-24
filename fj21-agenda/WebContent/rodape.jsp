@@ -4,6 +4,6 @@
 </head>
 <body>
 <hr />
-Copyright 2010 - Todos os direitos reservados
+<h5>Copyright 2010 - Todos os direitos reservados</h5>
 </body>
 </html>
