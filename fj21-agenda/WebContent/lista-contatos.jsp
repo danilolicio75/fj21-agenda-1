@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <title>Insert title here</title>
 </head>
@@ -10,13 +10,13 @@
 
 
 	<table border="1">
-		<tr align = 'center'>
-			
+		<tr align='center'>
+
 			<td><b>Nome</b></td>
 			<td><b>Email</b></td>
 			<td><b>Endereco</b></td>
 			<td><b>Data de Nascimento</b></td>
-			
+
 		</tr>
 		<!-- Percorre contatos montando as linhas da tabela -->
 		<c:forEach var="contato" items="${dao.lista}" varStatus="id">
@@ -28,10 +28,10 @@
         E-mail não informado
       </c:if></td>
 				<td>${contato.endereco}</td>
-				<td align = 'center'>
-				<fmt:formatDate value="${contato.dataNascimento.time}"
-    pattern="dd/MM/yyyy" />
-		
+				<td align='center'><fmt:formatDate
+						value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy" />
+				<td><a href="mvc?logica=RemoveContatoLogic&id=${contato.id}">Remover</a>
+				</td>
 		</c:forEach>
 	</table>
 	<c:import url="rodape.jsp" />
